@@ -1,5 +1,5 @@
 @extends('master2')
-@section('title', 'NilaiKuliah')
+@section('title', 'Keranjang Belanja')
 @section('konten')
 
 <br>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -98,7 +99,34 @@ Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 
+//Soal Latihan EAS
+//Keranjang Belanja (soal laki2)
 Route::get('/keranjangbelanjaIndex','App\Http\Controllers\KeranjangBelanjaController@index');
 Route::get('/keranjangbelanjaIndex/tambahBelanja','App\Http\Controllers\KeranjangBelanjaController@tambah');
 Route::post('/keranjangbelanjaIndex/store','App\Http\Controllers\KeranjangBelanjaController@store');
 Route::get('/keranjangbelanjaIndex/hapus/{id}','App\Http\Controllers\KeranjangBelanjaController@hapus');
+
+//Nilai kuliah (soal perempuan)
+Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@index');
+Route::get('/nilaikuliah/tambahnilaikuliah','App\Http\Controllers\NilaiKuliahController@tambah');
+Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@store');
+
+//Tugas Pra EAS (Laptop)
+Route::get('/laptop','App\Http\Controllers\LaptopController@index');
+Route::get('/laptop/tambahLaptop','App\Http\Controllers\LaptopController@tambah');
+Route::post('/laptop/store','App\Http\Controllers\LaptopController@store');
+Route::get('/laptop/editLaptop/{id}','App\Http\Controllers\LaptopController@edit');
+Route::post('/laptop/update','App\Http\Controllers\LaptopController@update');
+Route::get('/laptop/hapus/{id}','App\Http\Controllers\LaptopController@hapus');
+Route::get('/laptop/view/{id}','App\Http\Controllers\LaptopController@view');
+
+Route::get('/laptop/cari','App\Http\Controllers\LaptopController@cari');
+
+
+// BELAJAR EAS
+Route::get('/counter', 'App\Http\Controllers\CounterController@index');
+
+Route::get('/karyawan','App\Http\Controllers\KaryawanController@index');
+Route::get('/karyawan/tambahKaryawan','App\Http\Controllers\KaryawanController@tambah');
+Route::post('/karyawanstore','App\Http\Controllers\KaryawanController@store');
+Route::get('/karyawan/hapus/{id}','App\Http\Controllers\KaryawanController@hapus');

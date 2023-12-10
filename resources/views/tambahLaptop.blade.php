@@ -1,10 +1,14 @@
 @extends('master2')
-@section('title', 'Tambah Keranjang Belanja')
+@section('title', 'Data Pegawai')
 @section('konten')
-    {{-- <h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-    <h3>Data Pegawai</h3> --}}
+    <br />
+    <h2>Putu Panji Wiradharma</h2>
+    <h3>PWEB A - 5026221170</h3>
 
-    <a href="/keranjangbelanjaIndex"> Kembali</a>
+    <br />
+    <br />
+
+    <a href="/laptop"> Kembali</a>
 
     {{-- <div class="form-group row">
         <label for="first_name" class="col-xs-3 col-form-label mr-2">First Name</label>
@@ -16,26 +20,27 @@
     <br />
     <br />
 
-    <form action="/keranjangbelanjaIndex/store" method="post" class="form-horizontal">
+    <form action="/laptop/store" method="post" class="form-horizontal">
         {{ csrf_field() }}
         <div class="form-group row">
-            <label for="kodebarang" class="col-sm-1 col-form-label">Kode Barang</label>
+            <label for="merk" class="col-sm-1 col-form-label">Merk Laptop</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="kodebarang" name="kodebarang">
+                <input type="text" class="form-control" id="merk" name="merk">
             </div>
         </div>
         <div class="form-group row">
-            <label for="jumlah" class="col-sm-1 col-form-label">Jumlah</label>
+            <label for="stok" class="col-sm-1 col-form-label">Stock Laptop</label>
             <div class="col-sm-9">
-                <input type="text" class="form-control" id="jumlah" name="jumlah">
+                <input type="text" class="form-control" id="stok" name="stok">
             </div>
         </div>
         <div class="form-group row">
-            <label for="harga" class="col-sm-1 col-form-label">Harga</label>
+            <label for="tersedia" class="col-sm-1 col-form-label">Tersedia</label>
             <div class="col-sm-9">
-                <input type="number" class="form-control" id="harga" name="harga">
+                <input class="form-control" type="text" pattern="[YyNn]" title="Hanya boleh Y atau N" id="tersedia" name="tersedia">
             </div>
         </div>
+
         <input type="submit" class="btn btn-primary" value="Simpan Data">
         {{-- Nama <input type="text" name="nama"> <br /> --}}
         {{-- Jabatan <input type="text" name="jabatan"> <br /> --}}
