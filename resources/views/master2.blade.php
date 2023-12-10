@@ -24,7 +24,7 @@
                 <a class="nav-link" href="#">Link 1</a> <!-- Link Tugas -->
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link 2</a> <!-- Link UAS -->
+                <a class="nav-link" href="/keranjangbelanjaIndex">Link 2</a> <!-- Link UAS -->
             </li>
 
             <!-- Dropdown -->

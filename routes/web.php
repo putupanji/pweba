@@ -97,3 +97,8 @@ Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus')
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
+
+Route::get('/keranjangbelanjaIndex','App\Http\Controllers\KeranjangBelanjaController@index');
+Route::get('/keranjangbelanjaIndex/tambahBelanja','App\Http\Controllers\KeranjangBelanjaController@tambah');
+Route::post('/keranjangbelanjaIndex/store','App\Http\Controllers\KeranjangBelanjaController@store');
+Route::get('/keranjangbelanjaIndex/hapus/{id}','App\Http\Controllers\KeranjangBelanjaController@hapus');
