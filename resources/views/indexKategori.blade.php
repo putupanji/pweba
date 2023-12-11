@@ -1,25 +1,20 @@
 @extends('master2')
+@section('title', 'Kategori')
 
-@section('title', 'Data Pegawai')
 @section('konten')
+    <h3>Pilih Kategori</h3>
 
-    <label for="kategori" class="col-md-4 control-label">Pilih Kategori</label>
-
-    <div class="col-md-6">
-        <select id="kategori" class="form-control" name="kategori" required autofocus>
-            @foreach ($kategori as $k)
-                <option value="{{$k->Nama}}">{{$k->Nama}}</option>
+    <form action="/hasilcombo" method="GET">
+        <select name="selectedCategory" id="selectedCategory" class="form-control">
+            @foreach($kategori as $k)
+                <option value="{{ $k->ID }}">{{ $k->Nama }}</option>
             @endforeach
         </select>
+        <br>
+        <input type="submit" value="Kirim" class="btn btn-primary">
+    </form>
 
-        @if ($errors->has('kategori'))
-            <span class="help-block">
-                <strong>{{ $errors->first('kategori') }}</strong>
-            </span>
-        @endif
 
-        <a href="/kategori/hasilKategori" class="btn btn-primary">Kirim</a>
-    </div>
-</div>
 
+    <!-- Tambahkan tombol atau logika yang sesuai di sini -->
 @endsection

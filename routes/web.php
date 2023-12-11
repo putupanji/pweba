@@ -132,6 +132,6 @@ Route::post('/karyawanstore','App\Http\Controllers\KaryawanController@store');
 Route::get('/karyawan/hapus/{id}','App\Http\Controllers\KaryawanController@hapus');
 
 // EAS
-Route::get('/kategori','App\Http\Controllers\KategoriController@index');
-Route::get('/kategori/hasilKategori','App\Http\Controllers\KategoriController@hasil');
+Route::get('/combo','App\Http\Controllers\KategoriController@index');
+Route::get('/hasilcombo','App\Http\Controllers\KategoriController@view');
 

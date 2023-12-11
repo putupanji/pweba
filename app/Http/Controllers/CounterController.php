@@ -5,32 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class CounterController extends Controller
-{
-    // public function index()
-    // {
-    //     $counter = DB::table('counter')->get();
-    //     return view('indexCounter', ['counter' => $counter]);
-    // }
 
+class KategoriController extends Controller
+{
     public function index()
     {
-        $this->updateCounter(); // Panggil fungsi updateCounter sebelum menampilkan halaman
-        $jumlahPengunjung = $this->getCounter();
-
-        return view('indexcounter', compact('jumlahPengunjung'));
+        $kategori = DB::table('kategori')->get();
+        return view('indexKategori', ['kategori' => $kategori]);
     }
 
-    private function updateCounter()
+    public function view(Request $request)
     {
-        // Update jumlah pengunjung
-        DB::table('counter')->where('ID', 1)->increment('Jumlah');
-    }
+        $id = $request->input('selectedCategory');
+        $kategori = DB::table('kategori')->where('ID', $id)->first();
 
-    private function getCounter()
-    {
-        // Ambil nilai Jumlah
-        return DB::table('counter')->where('ID', 1)->value('Jumlah');
+        if ($kategori) {
+            return view('hasilKategori', ['kategori' => $kategori]);
+        } else {
+            return abort(404); // Menangani jika kategori tidak ditemukan.
+        }
     }
-
 }

@@ -1,10 +1,9 @@
 @extends('master2')
 
-@section('title', 'Data Pegawai')
+@section('title', 'Hasil Kategori')
+
 @section('konten')
-
-    <div class="jumbotron">
-        <h1>Anda telah memilih Kategori dengan Kode: {{$selectedKategori}}</h1>
-    </div>
-
+    <br>
+    <br>
+    <h3>Anda telah memilih Kategori dengan Kode: {{ $kategori->ID }}</h3>
 @endsection
